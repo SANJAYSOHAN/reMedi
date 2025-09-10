@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%233B82F6'/><path d='M50 25V75' stroke='white' stroke-width='12' stroke-linecap='round'/><path d='M25 50H75' stroke='white' stroke-width='12' stroke-linecap='round'/></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reMedi: Medicine Reminder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-primary-50: #eff6ff;   /* blue-50 */
+        --color-primary-100: #dbeafe;  /* blue-100 */
+        --color-primary-500: #3b82f6;  /* blue-500 */
+        --color-primary-600: #2563eb;  /* blue-600 */
+        --color-text-primary: #1f2937; /* gray-800 */
+        --color-text-secondary: #4b5563; /* gray-600 */
+        --color-bg: #f9fafb; /* gray-50 */
+        --color-card-bg: #ffffff;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .brand-gradient-text {
+        background: linear-gradient(to right, #3b82f6, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Custom Scrollbar Styling */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #d1d5db; /* gray-300 */
+        border-radius: 20px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #9ca3af; /* gray-400 */
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #d1d5db transparent;
+      }
+      
+      /* Utility to hide scrollbars */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* Animation for feedback messages */
+      @keyframes fade-in-out {
+        0%, 100% { opacity: 0; transform: translateY(-10px); }
+        10%, 90% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-out {
+        animation: fade-in-out 3s ease-in-out forwards;
+      }
+
+      /* Animation for modals and cards */
+      @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(20px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-fade-in-up {
+          animation: fade-in-up 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/bundle.js"></script>
+  </body>
+</html>

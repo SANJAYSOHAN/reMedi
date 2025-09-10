@@ -1,0 +1,6 @@
+
+{
+  "name": "reMedi",
+  "description": "A web application to help patients remember to take their medications on time, based on their meal schedules. It includes features for patients to view their prescriptions and for doctors to manage them.",
+  "requestFramePermissions": []
+}
